@@ -1,29 +1,31 @@
-# base image
+# mysqlclient 설치 
+FROM python:3.12 AS python-build
+RUN pip install mysqlclient
+
 FROM python:3.12-slim
+# 라이브러리 복사
+COPY --from=python-build /usr/local/lib/python3.12/site-packages /usr/local/lib/python3.12/site-packages
 
 # os 업데이트 & 설치 
 RUN apt-get update && apt-get install -y \
     build-essential \
-    default-libmysqlclient-dev \
+    libmariadb-dev \
     curl \
     software-properties-common \
     git \
     && rm -rf /var/lib/apt/lists/*
 
 # 코드 복사 
-COPY ./common /app
-COPY ./pages /app
-COPY ./.streamlit /app
+COPY ./common /app/common
+COPY ./pages /app/pages
 COPY ./main.py /app
 COPY ./requirements.txt /app
 
 # 실행 폴더 정의 
 WORKDIR /app
 
-# 필요한 라이브러리 설치  
-RUN pip3 install --upgrade pip
+# 필요한 라이브러리 설치 
 RUN pip3 install -r ./requirements.txt
-
 
 # 실행 포트 정의 
 EXPOSE 8501

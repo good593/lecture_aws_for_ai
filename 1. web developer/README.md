@@ -1,6 +1,19 @@
-# Streamlit으로 구현 
-1. 주식, 금, 석유, 미국 달러 그래프 화면 
--> api 실시간 데이터를 이용하여 그래프 표현
-2. 주식 예측 화면 (with 예측모델 결과)
--> 배치(주기적인 프로세스)를 이용해서 사전에 예측한 데이터를 RDB에서 추출하여 그래프 표현 
+# local PC
+## docker 
+- build 
+```shell
+# Make docker image
+docker build --platform linux/amd64 -t streamlit-image .
+docker images # 생성된 이미지 확인 
+```
+- Run container 
+```shell
+# 윈도우
+docker run --name streamlit-container -d -p 8501:8501 streamlit-image
 
+docker ps # 실행중인 컨테이너 확인 
+```
+- web 접속 
+```shell
+http://localhost:8501
+```
