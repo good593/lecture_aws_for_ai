@@ -1,6 +1,6 @@
 import streamlit as st
 
-from .search.constants import TICKER_TYPE
+from .etl.constants import TICKER_TYPE
 
 def get_ticker_market():
   selected_ticker_name = st.sidebar.selectbox("선택해주세요."

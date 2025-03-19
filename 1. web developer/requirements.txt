@@ -4,3 +4,6 @@ jupyter
 streamlit
 pandas
 numpy
+SQLAlchemy
+mysqlclient
+
