@@ -1,7 +1,7 @@
 import streamlit as st
 
-from common.search.download import download_of_ticker
-from common.search.constants import TICKER_TYPE
+from common.etl.download import download_of_ticker
+from common.etl.constants import TICKER_TYPE
 from common.plot import show_plot
 from common.sidebar import get_ticker_market
 from common.utils import get_today
