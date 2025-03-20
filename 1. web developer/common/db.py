@@ -11,7 +11,8 @@ def __get_connection(name="mydb", type="sql", dialect="mysql", autocommit=True):
     host=os.getenv("host") if os.getenv("host") is None else "localhost",
     username=os.getenv("username") if os.getenv("username") is None else "root",
     password=os.getenv("password") if os.getenv("password") is None else "root1234",
-    database=os.getenv("database") if os.getenv("database") is None else "examplesdb"
+    database=os.getenv("database") if os.getenv("database") is None else "examplesdb",
+    port=3306
   )
 
 def query(sql, ttl=3600, **kwargs):

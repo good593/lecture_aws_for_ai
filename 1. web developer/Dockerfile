@@ -1,10 +1,4 @@
-# mysqlclient 설치 
-FROM python:3.12 AS python-build
-RUN pip install mysqlclient
-
-FROM python:3.12-slim
-# 라이브러리 복사
-COPY --from=python-build /usr/local/lib/python3.12/site-packages /usr/local/lib/python3.12/site-packages
+FROM python:3.12
 
 # os 업데이트 & 설치 
 RUN apt-get update && apt-get install -y \
