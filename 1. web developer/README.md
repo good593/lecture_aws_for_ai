@@ -1,4 +1,7 @@
 # [uv](https://docs.astral.sh/uv/getting-started/)
+- `uv`는 패키지 설치 및 관리와 패키지 빌드 및 배포까지 모두 가능한 궁극의 파이썬 종속성/패키지/프로젝트 관리 툴이다. 
+  - 기존에 사용되던 pip, pip-tools, pipx, poetry, pyenv, twine, virtualenv 등의 프로젝트, 패키지 관리 툴들을 모두 대체하는 궁극의 툴이다.
+- `Rust`로 만든 프로그램답게, 속도 또한 다른 툴들과 비교도 되지 않을 정도로 빠르다. 특히나 이미 다운로드한 패키지의 경우 기본값으로 하드 링크를 이용해 설치하기 때문에 정말 정말 빠른데다 저장 공간도 추가로 필요하지 않다.
 
 ## [Python 패키징이 복잡해진 역사](https://sigridjin.medium.com/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%9D%BC%EB%A9%B4-uv-%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%A9%EC%8B%9C%EB%8B%A4-546d523f7178)
 - Python 생태계는 오랫동안 패키지 관리, 버전 관리, 가상환경 관리, 빌드 도구 등이 파편화되어 혼란스럽다는 평가를 받아왔습니다.
@@ -40,7 +43,7 @@ uv venv .venv -p 3.12
 uv pip install -r requirements.txt
 ```
 
-# docker 
+# [docker](https://www.docker.com/) 
 - build 
 ```shell
 # Make docker image
