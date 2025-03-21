@@ -1,0 +1,5 @@
+jupyter # jupyter notebook용
+pandas # 데이터 처리용
+numpy # 데이터 처리용
+beautifulsoup4 # 웹 크롤링용
+
