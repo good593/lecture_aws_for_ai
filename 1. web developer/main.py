@@ -1,4 +1,7 @@
 import streamlit as st
+from dotenv import load_dotenv
+
+load_dotenv() # .env 파일을 읽어서 환경변수로 사용할 수 있도록 설정
 
 from common.etl.download import download_of_ticker
 from common.etl.constants import TICKER_TYPE

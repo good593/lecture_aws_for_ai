@@ -8,10 +8,10 @@ def __get_connection(name="mydb", type="sql", dialect="mysql", autocommit=True):
     type=type, 
     autocommit=autocommit, 
     dialect=dialect,
-    host=os.getenv("host") if os.getenv("host") is None else "localhost",
-    username=os.getenv("username") if os.getenv("username") is None else "root",
-    password=os.getenv("password") if os.getenv("password") is None else "root1234",
-    database=os.getenv("database") if os.getenv("database") is None else "examplesdb",
+    host=os.getenv("host"),
+    username=os.getenv("user_name"),
+    password=os.getenv("password"),
+    database=os.getenv("database"),
     port=3306
   )
 

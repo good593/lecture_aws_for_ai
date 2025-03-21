@@ -6,4 +6,4 @@ pandas # 데이터 처리용
 numpy # 데이터 처리용
 SQLAlchemy # ORM용 -> streamlit & mysql 연동
 mysqlclient # mysql server connection용 
-
+python-dotenv # 환경변수를 파일로 관리하는 라이브러리
