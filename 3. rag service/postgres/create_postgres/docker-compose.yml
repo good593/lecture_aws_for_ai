@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  db-mysql:
+    image: mysql
+    restart: always
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - ./database/mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root1234
+      MYSQL_DATABASE: examplesdb
+      MYSQL_USER: urstory
+      MYSQL_PASSWORD: u1234
+    ports:
+      - "3306:3306"
+  db-postgres:
+    image: postgres
+    restart: always
+    volumes:
+      - ./database/postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: p1234
+    ports:
+      - "5432:5432"
