@@ -7,4 +7,5 @@ SQLAlchemy # ORM용 -> streamlit & mysql 연동
 mysqlclient # mysql server connection용 
 beautifulsoup4 # 웹 크롤링용
 youtube-transcript-api # 유튜브 자막 크롤링용
-yt-dlp # 유튜브 영상 정보 가져오기(채널명, 영상길이, 제목 등등)
+yt-dlp # 유튜브 영상 정보 가져오기(채널명, 영상길이, 제목 등등
+pytube
