@@ -2,4 +2,4 @@ boto3 # aws
 streamlit # web
 groq # groq
 python-dotenv # env
-
+jupyter
