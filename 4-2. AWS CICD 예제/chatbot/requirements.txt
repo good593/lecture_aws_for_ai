@@ -1,5 +1,5 @@
 boto3 # aws 
 streamlit # web
-openai # chatGPT
+groq # groq
 python-dotenv # env
 
