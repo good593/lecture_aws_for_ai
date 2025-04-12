@@ -1,5 +1,5 @@
 # base image
-FROM python:3.9-slim
+FROM python:3.13-slim
 
 # os 업데이트 & 설치 
 RUN apt-get update && apt-get install -y \
@@ -10,7 +10,8 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # 코드 복사 
-COPY ./openai_chatbot /app
+COPY ./common /app/common
+COPY ./chatbot.py /app/chatbot.py
 COPY ./requirements.txt /app
 
 # 실행 폴더 정의 
