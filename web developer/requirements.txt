@@ -1,9 +1,0 @@
-plotly # 시각화용
-yfinance # 주식 데이터용
-jupyter # jupyter notebook용
-streamlit # 웹페이지용
-pandas # 데이터 처리용
-numpy # 데이터 처리용
-SQLAlchemy # ORM용 -> streamlit & mysql 연동
-mysqlclient # mysql server connection용 
-
