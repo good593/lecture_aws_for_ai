@@ -26,8 +26,8 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      # 프로젝트 폴더로 이동(폴더명에 띄어쓰기 포함되어 있을 경우 '' 사용) 
-      - cd ./'4-2. AWS CICD Example'/chatbot
+      # 프로젝트 폴더로 이동(폴더명에 띄어쓰기 포함되어 있을 경우 "" 사용) 
+      - cd ./"4-2. AWS CICD Example"/chatbot
       - pwd
       - echo Building the Docker image...
       # Github Repository에 있는 Dockerfile의 위치에 맞춰 수정 
